@@ -1,0 +1,19 @@
+{
+  "name": "mmtr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "sass --watch src/sass:src/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akirakonnichiwa/mmtr.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akirakonnichiwa/mmtr/issues"
+  },
+  "homepage": "https://github.com/akirakonnichiwa/mmtr#readme"
+}
