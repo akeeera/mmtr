@@ -73,7 +73,7 @@ a {
 .main {
   width: 100vw;
   height: 100vh;
-  background-image: url("img/pexels-photo-356056.png");
+  background-image: url(../img/pexels-photo-356056.png);
 }
 
 .home {
@@ -81,7 +81,7 @@ a {
   position: absolute;
   width: 100vw;
   height: 90vh;
-  background: url(img/pexels-photo-356056.png);
+  background: url(../img/pexels-photo-356056.png);
   background-size: cover;
   box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.705) inset;
 }
@@ -154,4 +154,6 @@ a {
   font-size: 25px;
   color: white;
   text-decoration: none;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
