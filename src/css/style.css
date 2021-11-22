@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .header {
   margin: 0 10% 0 10%;
   height: 8vh;
@@ -44,7 +48,6 @@ body {
 
 a {
   text-decoration: none;
-  color: #ffffff;
   padding: 10px;
 }
 
@@ -72,6 +75,10 @@ a {
   background: url(../img/pexels-photo-356056.png);
   background-size: cover;
   box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.705) inset;
+}
+
+.home__button button a {
+  color: white;
 }
 
 .heading__home {
@@ -150,33 +157,129 @@ a {
 }
 
 .services {
-  width: 100%;
-  background-color: #e4fdf9;
+  padding: 120px 0;
+  background-color: #e8fff5;
+}
+
+.services__info {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .heading__services {
+  padding: 20px;
   font-size: 30px;
   letter-spacing: 2px;
   line-height: 22px;
   color: #212121;
-  font-weight: 700;
+  font-weight: 999;
   text-align: center;
 }
 
-.services__info {
+.services__text {
+  padding: 20px;
   width: 641px;
   height: 52px;
   font-size: 15px;
   letter-spacing: 1px;
   line-height: 22px;
   color: #212121;
-  font-weight: 400;
+  font-weight: 999;
   text-align: center;
 }
 
 .cards {
+  margin: 50px 10%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 62px 4px;
+  grid-auto-flow: dense;
+}
+
+.heading__cards {
+  padding: 15px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  line-height: 22px;
+  font-weight: 600;
+  margin-top: 50px;
+}
+
+.text__cards {
+  width: 300px;
+  font-size: 15px;
+  letter-spacing: 1px;
+  line-height: 25px;
+  font-weight: 450;
+  margin: 0 0 50px 0px;
+}
+
+.read__button {
+  color: #212121;
+  font-family: "Montserrat", sans-serif;
+  border: 2px #212121 solid;
+  padding: 14px;
+  font-weight: 500;
+  background-color: #ffffff00;
+  transition: 0.185s;
+}
+.read__button:hover {
+  transition: 0.185s;
+  transform: scale(1.06);
+}
+
+.card__research, .card__portfolio, .card__support, .card__documentation, .card__development, .card__design {
+  background: url(../img/phone.png) no-repeat;
+  background-position: top 40px center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 380px;
+  height: 450px;
+  background-color: #ffffff;
+  transition: 0.1865s;
+}
+.card__research:hover, .card__portfolio:hover, .card__support:hover, .card__documentation:hover, .card__development:hover, .card__design:hover {
+  background: url(../img/smartphone.png) no-repeat;
+  background-position: top 40px center;
+  filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.35));
+  background-color: #2fb88a;
+  transform: scale(1.025);
+  color: #ffffff;
+}
+
+.card__research:hover .read__button {
+  color: #ffffff;
+  border: 2px white solid;
+}
+
+.card__portfolio:hover .read__button {
+  color: #ffffff;
+  border: 2px white solid;
+}
+
+.card__support:hover .read__button {
+  color: #ffffff;
+  border: 2px white solid;
+}
+
+.card__documentation:hover .read__button {
+  color: #ffffff;
+  border: 2px white solid;
+}
+
+.card__development:hover .read__button {
+  color: #ffffff;
+  border: 2px white solid;
+}
+
+.card__design:hover .read__button {
+  color: #ffffff;
+  border: 2px white solid;
 }
 
 /*# sourceMappingURL=style.css.map */
