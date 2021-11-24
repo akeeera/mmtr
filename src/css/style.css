@@ -216,10 +216,6 @@ a {
   background: #ffffff00;
   transition: 0.185s;
 }
-.read__button:hover {
-  transition: 0.185s;
-  transform: scale(1.06);
-}
 
 .card {
   background: url(../img/phone.png) #ffffff no-repeat top 40px center;
@@ -242,6 +238,128 @@ a {
 .card:hover .read__button {
   color: #ffffff;
   border: 2px white solid;
+}
+
+.contacts {
+  padding: 6.8%;
+  background: url(../img/back.png) #0f0f0f repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+.heading__contacts {
+  font-size: 30px;
+  letter-spacing: 2px;
+  line-height: 22px;
+  color: #ffffff;
+  font-weight: 700;
+  text-align: center;
+}
+
+.text__contacts {
+  padding: 28px;
+  width: 700px;
+  font-size: 15px;
+  letter-spacing: 1px;
+  line-height: 22px;
+  color: #ffffff;
+  font-weight: 400;
+  text-align: center;
+  margin: auto;
+}
+
+.extra__info {
+  margin: 50px 10%;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 58px 2px;
+  grid-auto-flow: dense;
+}
+
+.mark {
+  background: url(../img/mark.png) no-repeat top center;
+}
+
+.connect {
+  background: url(../img/contact.png) no-repeat top center;
+}
+
+.message {
+  background: url(../img/message.png) no-repeat top center;
+}
+
+.mark__info, .connect__info, .message__info {
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 28px;
+  margin-top: 45%;
+  text-align: center;
+  width: 210px;
+  height: 50px;
+  color: #fff;
+}
+
+.forms {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#name, #mail {
+  font-family: "Montserrat", sans-serif;
+  margin: 0 20px 20px 0;
+  padding: 12px;
+  font-size: 20px;
+  font-weight: 500;
+  height: 48px;
+  width: 25vw;
+  border-radius: 15px;
+  background-color: #fff;
+  border: none;
+}
+
+#msg {
+  font-family: "Montserrat", sans-serif;
+  width: 52vw;
+  border: none;
+  font-size: 20px;
+  padding: 14px;
+  height: 200px;
+  border-radius: 15px;
+  background-color: #ffffff;
+}
+
+#send {
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  margin: 20px 0 0 0;
+  font-size: 20px;
+  color: #696969;
+  font-weight: 600;
+  text-align: center;
+  width: 220px;
+  height: 70px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  transition: 0.2s;
+}
+#send:hover {
+  transition: 0.2s;
+  transform: scale(1.05);
+}
+
+.footer {
+  text-align: center;
+  background: white;
+  padding: 14px;
+}
+.footer p {
+  font-size: 16px;
+  color: #212121;
+  font-weight: 600;
 }
 
 /*# sourceMappingURL=style.css.map */
