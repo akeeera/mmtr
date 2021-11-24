@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/akirakonnichiwa/mmtr/issues"
   },
-  "homepage": "https://github.com/akirakonnichiwa/mmtr#readme"
+  "homepage": "https://github.com/akirakonnichiwa/mmtr#readme",
+  "dependencies": {
+    "git": "^0.1.5"
+  }
 }
