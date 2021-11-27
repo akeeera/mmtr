@@ -152,14 +152,15 @@
         </div>
 
         <div class="forms">
-            <form action="" method="post">
+            <form method="post" name="forma">
                 <div class="input-group">
-                    <input type="text" id="name" name="user_name" placeholder="Your Name" />
-                    <input type="email" id="mail" name="user_email" placeholder="Your Email" />
+                    <input type="text" id="name" name="user_name" placeholder="Your Name" required minlength="1" />
+                    <input type="email" id="mail" name="user_email" placeholder="Your Email" required minlength="4"/>
                 </div>
-                <textarea type="text" id="msg" name="user_message" placeholder="Write Message"></textarea>
+                <textarea type="text" id="msg" name="user_message" placeholder="Write Message" required
+                    minlength="50"></textarea>
                 <div class="button__send">
-                    <input type="submit" id="send" name="submit" />
+                    <button id="send" value="SEND" onclick="Complete();">SEND</button>
                 </div>
             </form>
         </div>
@@ -172,6 +173,7 @@
         </p>
     </footer>
 
+    <script src="./js/forms.js"></script>
 </body>
 
 </html>

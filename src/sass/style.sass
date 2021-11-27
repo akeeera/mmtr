@@ -232,8 +232,12 @@ a
     justify-content: center
     align-items: center
     flex-direction: column
+    input, textarea, button
+        background: #ffffff
+        font-family: "Montserrat", sans-serif
+input:focus:invalid
+    outline: none
 #name, #mail
-    font-family: "Montserrat", sans-serif
     margin: 0 20px 20px 0
     padding: 12px
     font-size: 20px
@@ -241,20 +245,13 @@ a
     height: 48px
     width: 25vw
     border-radius: 15px
-    background-color: #fff
-    border: none
 #msg
-    font-family: "Montserrat", sans-serif
     width: 52vw
-    border: none
     font-size: 20px
     padding: 14px
     height: 200px
     border-radius: 15px
-    background-color: #ffffff
 #send
-    border: none
-    font-family: "Montserrat", sans-serif
     margin: 20px 0 0 0
     font-size: 20px
     color: #696969
@@ -263,7 +260,6 @@ a
     width: 220px
     height: 70px
     border-radius: 10px
-    background-color: #ffffff
     transition: .2s
     &:hover
         transition: .2s
