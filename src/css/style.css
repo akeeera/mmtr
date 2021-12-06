@@ -312,11 +312,15 @@ a {
   font-family: "Montserrat", sans-serif;
 }
 
+textarea, input:invalid {
+  border-color: red;
+}
+
 input:focus:invalid {
   outline: none;
 }
 
-#name, #mail {
+#name, #email {
   margin: 0 20px 20px 0;
   padding: 12px;
   font-size: 20px;
@@ -327,7 +331,7 @@ input:focus:invalid {
 }
 
 #msg {
-  width: 52vw;
+  width: 52.5vw;
   font-size: 20px;
   padding: 14px;
   height: 200px;

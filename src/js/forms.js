@@ -1,19 +1,19 @@
 function Complete() {
-    localStorage.setItem('Name', document.forma.user_name.value);
-    localStorage.setItem('Email', document.forma.user_email.value);
-    localStorage.setItem('Message', document.forma.user_message.value);
-
-    console.log("Name: " + localStorage.getItem('Name'));
-    console.log("Email: " + localStorage.getItem('Email'));
-    console.log("Message: " + localStorage.getItem('Message'));
+    var result =
+        "Name: " + document.application.user_name.value +
+        "\nEmail: " + document.application.user_email.value +
+        "\nText: " + document.application.user_message.value;
+    console.log(result);
 }
 
-const email = document.getElementById("mail");
-
-email.addEventListener("input", function (event) {
-    if (email.validity.typeMismatch) {
-        email.setCustomValidity("Неверный email адрес");
+function ValidateEmail(email) {
+    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if (email.value.match(mailformat)) {
+        document.application.user_email.focus();
+        return true;
     } else {
-        email.setCustomValidity("");
+        alert("Вы ввели неверный Email");
+        document.application.user_email.focus();
+        return false;
     }
-});
+}
