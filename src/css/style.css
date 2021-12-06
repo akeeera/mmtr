@@ -312,10 +312,6 @@ a {
   font-family: "Montserrat", sans-serif;
 }
 
-input:focus:invalid {
-  outline: none;
-}
-
 #name, #email {
   margin: 0 20px 20px 0;
   padding: 12px;

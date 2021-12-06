@@ -5,12 +5,14 @@ function complete(event) {
     const name = form.elements.user_name
     const email = form.elements.user_email
     const message = form.elements.user_message
+
     const nameIsValid = name.value
     const messageIsValid = message.value.length >= 50
+    const mailIsValid = email.value.match(mailformat)
 
     var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     if (email.value.match(mailformat)) {
-        form.elements.user_email.focus();
+        form.elements.user_email;
         return true;
     } else {
         alert("Вы ввели неверный Email");
@@ -27,11 +29,14 @@ function complete(event) {
     } else {
         message.style.borderColor = 'white'
     }
+    if (!mailIsValid) {
+        message.style.borderColor = 'red'
+    }
     if (nameIsValid && messageIsValid) {
         var result =
             "Name: " + name.value +
-            "\nEmail: " + name.value +
-            "\nText: " + name.value;
+            "\nEmail: " + email.value +
+            "\nText: " + message.value;
         console.log(result);
     }
 }
