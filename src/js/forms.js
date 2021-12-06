@@ -10,11 +10,11 @@ function complete(event) {
 
     var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     if (email.value.match(mailformat)) {
-        document.application.user_email.focus();
+        form.elements.user_email.focus();
         return true;
     } else {
         alert("Вы ввели неверный Email");
-        document.application.user_email.focus();
+        form.elements.user_email.focus();
     }
     if (!nameIsValid) {
         name.style.borderColor = 'red'
