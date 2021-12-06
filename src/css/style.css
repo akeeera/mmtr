@@ -312,10 +312,6 @@ a {
   font-family: "Montserrat", sans-serif;
 }
 
-textarea, input:invalid {
-  border-color: red;
-}
-
 input:focus:invalid {
   outline: none;
 }
