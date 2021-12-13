@@ -18,5 +18,13 @@
   "homepage": "https://github.com/akirakonnichiwa/mmtr#readme",
   "dependencies": {
     "git": "^0.1.5"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.27.7",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^5.0.0",
+    "gulp-uglifyjs": "^0.6.2",
+    "sass": "^1.44.0"
   }
 }
