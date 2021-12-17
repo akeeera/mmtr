@@ -21,7 +21,7 @@ gulp.task('sass', function () { // Создаем таск Sass
 });
 
 gulp.task('scripts', function () {
-    return gulp.src(['src/js/common.js', 'src/libs/**/*.js'])
+    return gulp.src(['src/js/forms.js'])
         .pipe(browserSync.reload({
             stream: true
         }))
