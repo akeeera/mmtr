@@ -1,8 +1,15 @@
 var gulp = require('gulp'), // Подключаем Gulp
     sass = require('gulp-sass')(require('sass')), //Подключаем Sass пакет,
-    browserSync = require('browser-sync'), // Подключаем Browser Sync
-    concat = require('gulp-concat'), // Подключаем gulp-concat (для конкатенации файлов)
-    uglify = require('gulp-uglifyjs'); // Подключаем gulp-uglifyjs (для сжатия JS)
+    browserSync = require('browser-sync'); // Подключаем Browser Sync
+
+gulp.task('browser-sync', function () { // Создаем таск browser-sync
+    browserSync({ // Выполняем browser Sync
+        server: { // Определяем параметры сервера
+            baseDir: 'src' // Директория для сервера - src
+        },
+        notify: false // Отключаем уведомления
+    });
+});
 
 gulp.task('sass', function () { // Создаем таск Sass
     return gulp.src('src/sass/**/*.sass') // Берем источник
@@ -13,23 +20,11 @@ gulp.task('sass', function () { // Создаем таск Sass
         })) // Обновляем CSS на странице при изменении
 });
 
-gulp.task('browser-sync', function () { // Создаем таск browser-sync
-    browserSync({ // Выполняем browserSync
-        server: { // Определяем параметры сервера
-            baseDir: 'src' // Директория для сервера - src
-        },
-        notify: false // Отключаем уведомления
-    });
-});
-
 gulp.task('scripts', function () {
-    return gulp.src([ // Берем все необходимые библиотеки
-            'src/libs/jquery/dist/jquery.min.js', // Берем jQuery
-            'src/libs/magnific-popup/dist/jquery.magnific-popup.min.js' // Берем Magnific Popup
-        ])
-        .pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
-        .pipe(uglify()) // Сжимаем JS файл
-        .pipe(gulp.dest('src/js')); // Выгружаем в папку src/js
+    return gulp.src(['src/js/common.js', 'src/libs/**/*.js'])
+        .pipe(browserSync.reload({
+            stream: true
+        }))
 });
 
 gulp.task('code', function () {
@@ -44,4 +39,4 @@ gulp.task('watch', function () {
     gulp.watch('src/*.html', gulp.parallel('code')); // Наблюдение за HTML файлами в корне проекта
     gulp.watch(['src/js/forms.js'], gulp.parallel('scripts')); // Наблюдение за главным JS файлом и за библиотеками
 });
-gulp.task('default', gulp.parallel('sass', 'scripts', 'browser-sync', 'watch'));
+gulp.task('default', gulp.parallel('sass', 'browser-sync', 'watch'));
